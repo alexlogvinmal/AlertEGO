@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import { Login } from './components/Login';
+import { Main } from './components/Main';
+import { News } from "./components/News";
+import { Profile } from './components/Profile';
 
-function App() {
+
+
+export function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <div>
+        <Link to={`/`}>Main</Link>
+        <Link to={`/news`}>News</Link>
+        <Link to={`/profile`}>Profile</Link>
+        <Link to={`/login`}>Login</Link>
+      </div>
 
-export default App;
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<h1>NOT FOUND</h1>} />
+      </Routes>
+    </>
+  )
+};
+
