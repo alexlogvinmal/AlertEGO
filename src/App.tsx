@@ -5,12 +5,22 @@ import { Main } from './components/Main';
 import { News } from "./components/News";
 import { Profile } from './components/Profile';
 import { LogInStatus } from './redux/types';
-import { useAppSelector } from './redux/hook';
+import { useAppSelector, useAppDispatch } from './redux/hook';
+import { logIn, logOut } from './redux/auth/actions';
 
 
 export function App() {
-
+  const dispatch = useAppDispatch();
   const login: LogInStatus = useAppSelector((state: any) => state.loginReducer);
+
+  useEffect(() => {
+    const value = localStorage.getItem("status");
+    if (value === "true") {
+      dispatch(dispatch(logIn()));
+    } else if (value === "false") {
+      dispatch(dispatch(logOut()));
+    }
+  }, []);
 
   return (
     <>

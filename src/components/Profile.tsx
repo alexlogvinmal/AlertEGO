@@ -16,10 +16,15 @@ export function Profile() {
     }
  },[login.status]);
 
+ function changeLogIn(){
+   localStorage.setItem("status", "false");
+   dispatch(logOut())
+ }
+
     return (
     <>
     <h1>Profile</h1>
-    <button onClick={e=> dispatch(logOut())}>Log Out</button>
+    <button onClick={changeLogIn}>Log Out</button>
     </>
     ) 
   };
