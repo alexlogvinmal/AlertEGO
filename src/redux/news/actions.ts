@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { PostActionTypes } from './types';
+import { PostActionTypes } from '../types';
 import axios from 'axios'
 
 export const fetchPostsRequest = () => ({
@@ -12,7 +12,7 @@ export const fetchPostsSuccess = (data: any) => ({
 });
 
 export const fetchPostsFailure = (error: string) => ({
-  type: PostActionTypes.FETCH_POSTS_FAILURE,
+  type: PostActionTypes.FETCH_POSTS_FAILED,
   payload: error,
 });
 

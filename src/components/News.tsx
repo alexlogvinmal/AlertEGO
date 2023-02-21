@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import { Post, PostState } from '../redux/types';
-import { fetchPosts } from '../redux/actions';
-import { useAppDispatch } from '../redux/hook';
+import { fetchPosts } from '../redux/news/actions';
+import { useAppDispatch, useAppSelector } from '../redux/hook';
 
 export function News() {
 
-    const postState: PostState = useSelector((state: any) => state);
+    const postState: PostState = useAppSelector((state: any) => state.postReducer);
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(fetchPosts());
@@ -24,11 +23,12 @@ export function News() {
     }
     
     const renderPosts = () => {
-
         if (postState.loading) {
+            loadbttn =false;
             return <div>Loading...</div>;
         }
         if (postState.error) {
+            loadbttn =false;
             return <div>{postState.error}</div>;
         }
         return newdata.map((post: Post) => (
@@ -43,7 +43,7 @@ export function News() {
     return (
     <>
     <div className='1'>{renderPosts()}</div>
-    {loadbttn ? <button onClick={e=> setLoadto(loadto+10)}>Load More</button> : <p>All Post Loaded</p>}
+    {loadbttn ? <button onClick={e=> setLoadto(loadto+10)}>Load More</button> : <></>}
     </>
     )
 };

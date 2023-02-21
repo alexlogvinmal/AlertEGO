@@ -1,4 +1,4 @@
-import { PostActionTypes, PostState } from './types';
+import { PostActionTypes, PostState } from '../types';
 
 const initialState: PostState = {
   posts: [],
@@ -19,7 +19,7 @@ export const postReducer = (state = initialState, action: any): PostState => {
         loading: false,
         posts: action.payload,
       };
-    case PostActionTypes.FETCH_POSTS_FAILURE:
+    case PostActionTypes.FETCH_POSTS_FAILED:
       return {
         ...state,
         loading: false,
