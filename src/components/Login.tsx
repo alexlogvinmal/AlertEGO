@@ -4,13 +4,12 @@ import { useAppDispatch, useAppSelector } from '../redux/hook';
 import { logIn } from '../redux/auth/actions';
 import { LogInStatus } from '../redux/types';
 
+
 export function Login() {
 
   const dispatch = useAppDispatch();
   let navigate = useNavigate();
   const login: LogInStatus = useAppSelector((state: any) => state.loginReducer);
-
-  
 
   useEffect(() => {
     if (login.status) {
@@ -22,6 +21,8 @@ export function Login() {
     localStorage.setItem("status", "true");
     dispatch(logIn())
   }
+
+
 
   return (
     <>

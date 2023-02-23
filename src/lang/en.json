@@ -3,6 +3,10 @@
       "main": "Main",
       "news": "News",
       "profile": "Profile",
-      "login": "Log In"
+      "login": "Log In",
+      "logout": "Log Out",
+      "lang": "Change language to Ukrainian",
+      "delete": "Delete news",
+      "loadmore": "Load more"
     }
 }
