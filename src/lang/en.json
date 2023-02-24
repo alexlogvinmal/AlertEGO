@@ -3,10 +3,14 @@
       "main": "Main",
       "news": "News",
       "profile": "Profile",
-      "login": "Log In",
+      "login": "Login",
       "logout": "Log Out",
       "lang": "Change language to Ukrainian",
       "delete": "Delete news",
-      "loadmore": "Load more"
+      "loadmore": "Load more",
+      "loginform": "Please Login",
+      "username": "Username",
+      "password": "Password",
+      "error": "Incorrect username or password."
     }
 }

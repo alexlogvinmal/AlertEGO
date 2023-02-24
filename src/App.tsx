@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import { Main } from './components/Main';
 import { News } from "./components/News";
-import { Login } from './components/Login';
+import Login from './components/Login';
 import { Profile } from './components/Profile';
 import Header from './components/Header';
-import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Alltype from './components/Alltype';
+
 
 function App() {
 
