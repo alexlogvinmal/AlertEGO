@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/AlterEGO/static/css/main.dc4b5adf.css",
-    "main.js": "/AlterEGO/static/js/main.55773f83.js",
+    "main.js": "/AlterEGO/static/js/main.dabf11d5.js",
     "index.html": "/AlterEGO/index.html",
     "main.dc4b5adf.css.map": "/AlterEGO/static/css/main.dc4b5adf.css.map",
-    "main.55773f83.js.map": "/AlterEGO/static/js/main.55773f83.js.map"
+    "main.dabf11d5.js.map": "/AlterEGO/static/js/main.dabf11d5.js.map"
   },
   "entrypoints": [
     "static/css/main.dc4b5adf.css",
-    "static/js/main.55773f83.js"
+    "static/js/main.dabf11d5.js"
   ]
 }
