@@ -29,8 +29,8 @@ export default function Footer() {
                     alignItems: 'center',
                     justifyContent: 'center'
                 }}>
-                    <Link href="/AlertEGO" underline="none" color="white">{t('menu.main')}</Link>
-                    <Link href="/AlertEGO/news" underline="none" color="white">{t('menu.news')}</Link>
+                    <Link href="/AlterEGO" underline="none" color="white">{t('menu.main')}</Link>
+                    <Link href="/AlterEGO/news" underline="none" color="white">{t('menu.news')}</Link>
                 </Box>
                 <Link href="https://github.com/alexlogvinmal" underline="none" color="white" target="_blank">My GitHub</Link>
             </Box>

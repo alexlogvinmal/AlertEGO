@@ -61,11 +61,11 @@ export default function Header() {
 
     const handleCloseNavMenuMain = () => {
         setAnchorElNav(null);
-        return navigate("/AlertEGO")
+        return navigate("/AlterEGO")
     };
     const handleCloseNavMenuNews = () => {
         setAnchorElNav(null);
-        return navigate("/AlertEGO/news")
+        return navigate("/AlterEGO/news")
     };
 
     const handleCloseUserMenu = () => {
@@ -74,14 +74,14 @@ export default function Header() {
 
     const handleCloseUserMenuProfile = () => {
         setAnchorElUser(null);
-        return navigate("/AlertEGO/profile")
+        return navigate("/AlterEGO/profile")
     };
 
     const handleCloseUserMenuLogOut = () => {
         setAnchorElUser(null);
         localStorage.setItem("status", "false");
         dispatch(logOut());
-        return navigate("/AlertEGO")
+        return navigate("/AlterEGO")
     };
 
     return (
@@ -92,7 +92,7 @@ export default function Header() {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/AlertEGO"
+                        href="/AlterEGO"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -103,7 +103,7 @@ export default function Header() {
                             textDecoration: 'none',
                         }}
                     >
-                        AlertEGO
+                        AlterEGO
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -145,7 +145,7 @@ export default function Header() {
                         variant="h5"
                         noWrap
                         component="a"
-                        href="/AlertEGO"
+                        href="/AlterEGO"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
@@ -157,7 +157,7 @@ export default function Header() {
                             textDecoration: 'none',
                         }}
                     >
-                        AlertEGO
+                        AlterEGO
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Button
