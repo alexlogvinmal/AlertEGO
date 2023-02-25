@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import './index.css';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import  App  from "./App";
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
@@ -36,9 +36,9 @@ const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </React.StrictMode>
 );
