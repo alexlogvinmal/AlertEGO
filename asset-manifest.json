@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc4b5adf.css",
-    "main.js": "/static/js/main.e2854bdb.js",
-    "index.html": "/index.html",
-    "main.dc4b5adf.css.map": "/static/css/main.dc4b5adf.css.map",
-    "main.e2854bdb.js.map": "/static/js/main.e2854bdb.js.map"
+    "main.css": "/AlertEGO/static/css/main.dc4b5adf.css",
+    "main.js": "/AlertEGO/static/js/main.8b8bcd1d.js",
+    "index.html": "/AlertEGO/index.html",
+    "main.dc4b5adf.css.map": "/AlertEGO/static/css/main.dc4b5adf.css.map",
+    "main.8b8bcd1d.js.map": "/AlertEGO/static/js/main.8b8bcd1d.js.map"
   },
   "entrypoints": [
     "static/css/main.dc4b5adf.css",
-    "static/js/main.e2854bdb.js"
+    "static/js/main.8b8bcd1d.js"
   ]
 }
