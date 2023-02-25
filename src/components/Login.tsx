@@ -34,7 +34,7 @@ export default function Login() {
 
   useEffect(() => {
     if (login.status) {
-      return navigate("/profile");
+      return navigate("/AlertEGO/profile");
     }
   }, [login.status]);
 

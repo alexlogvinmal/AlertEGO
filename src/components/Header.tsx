@@ -61,11 +61,11 @@ export default function Header() {
 
     const handleCloseNavMenuMain = () => {
         setAnchorElNav(null);
-        return navigate("/")
+        return navigate("/AlertEGO")
     };
     const handleCloseNavMenuNews = () => {
         setAnchorElNav(null);
-        return navigate("/news")
+        return navigate("/AlertEGO/news")
     };
 
     const handleCloseUserMenu = () => {
@@ -74,14 +74,14 @@ export default function Header() {
 
     const handleCloseUserMenuProfile = () => {
         setAnchorElUser(null);
-        return navigate("/profile")
+        return navigate("/AlertEGO/profile")
     };
 
     const handleCloseUserMenuLogOut = () => {
         setAnchorElUser(null);
         localStorage.setItem("status", "false");
         dispatch(logOut());
-        return navigate("/")
+        return navigate("/AlertEGO")
     };
 
     return (
@@ -92,7 +92,7 @@ export default function Header() {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/"
+                        href="/AlertEGO"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -145,7 +145,7 @@ export default function Header() {
                         variant="h5"
                         noWrap
                         component="a"
-                        href="/"
+                        href="/AlertEGO"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },

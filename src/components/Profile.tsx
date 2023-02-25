@@ -14,7 +14,7 @@ export default function Profile() {
 
   useEffect(() => {
     if (login.status==false){
-       return navigate("/");
+       return navigate("/AlertEGO");
     }
  },[login.status]);
 
