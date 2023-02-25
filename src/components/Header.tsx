@@ -227,7 +227,7 @@ export default function Header() {
                             </Menu>
                         </Box>
                         :
-                        <Button color="inherit" sx={{ width: 68.15, height: 36.5 }} onClick={e => navigate("/login")}>{t('menu.login')}</Button>
+                        <Button color="inherit" sx={{ width: 68.15, height: 36.5 }} onClick={e => navigate("/AlterEGO/login")}>{t('menu.login')}</Button>
                     }
                 </Toolbar>
             </Container>
