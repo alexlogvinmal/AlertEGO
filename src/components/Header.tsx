@@ -61,11 +61,11 @@ export default function Header() {
 
     const handleCloseNavMenuMain = () => {
         setAnchorElNav(null);
-        return navigate("/AlterEGO")
+        return navigate("/")
     };
     const handleCloseNavMenuNews = () => {
         setAnchorElNav(null);
-        return navigate("/AlterEGO/news")
+        return navigate("/news")
     };
 
     const handleCloseUserMenu = () => {
@@ -74,14 +74,14 @@ export default function Header() {
 
     const handleCloseUserMenuProfile = () => {
         setAnchorElUser(null);
-        return navigate("/AlterEGO/profile")
+        return navigate("/profile")
     };
 
     const handleCloseUserMenuLogOut = () => {
         setAnchorElUser(null);
         localStorage.setItem("status", "false");
         dispatch(logOut());
-        return navigate("/AlterEGO")
+        return navigate("/")
     };
 
     return (
@@ -92,7 +92,7 @@ export default function Header() {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="/AlterEGO"
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -145,7 +145,7 @@ export default function Header() {
                         variant="h5"
                         noWrap
                         component="a"
-                        href="/AlterEGO"
+                        href="/"
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
@@ -227,7 +227,7 @@ export default function Header() {
                             </Menu>
                         </Box>
                         :
-                        <Button color="inherit" sx={{ width: 68.15, height: 36.5 }} onClick={e => navigate("/AlterEGO/login")}>{t('menu.login')}</Button>
+                        <Button color="inherit" sx={{ width: 68.15, height: 36.5 }} onClick={e => navigate("/login")}>{t('menu.login')}</Button>
                     }
                 </Toolbar>
             </Container>

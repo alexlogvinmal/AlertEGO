@@ -34,7 +34,7 @@ export default function Login() {
 
   useEffect(() => {
     if (login.status) {
-      return navigate("/AlterEGO/profile");
+      return navigate("/profile");
     }
   }, [login.status]);
 
