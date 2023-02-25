@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import './index.css';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import  App  from "./App";
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
@@ -22,10 +22,10 @@ i18n
         translation: ua
       }
     },
-    lng: 'ua', // встановлення мови за замовчуванням
-    fallbackLng: 'ua', // якщо переклад не знайдено, використовуйте англійську мову
+    lng: 'ua',
+    fallbackLng: 'ua',
     interpolation: {
-      escapeValue: false // дозволяє використовувати html в перекладах
+      escapeValue: false
     }
   });
 
@@ -36,9 +36,9 @@ const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter>
+      <BrowserRouter>
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
