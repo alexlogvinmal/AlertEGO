@@ -38,12 +38,6 @@ export default function Login() {
     }
   }, [login.status]);
 
-  function changeLogIn(){
-    localStorage.setItem("status", "true");
-    dispatch(logIn())
-  }
-
-
   const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
   };
@@ -61,7 +55,6 @@ export default function Login() {
     if(username=='admin' && password=='12345'){
       localStorage.setItem("status", "true");
       dispatch(logIn());
-
     }else{
       setError(true)
     }

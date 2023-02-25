@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Post, PostState } from '../redux/types';
 import { fetchPosts } from '../redux/news/actions';
 import { useAppDispatch, useAppSelector } from '../redux/hook';
+import { useTranslation } from 'react-i18next';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
@@ -9,7 +10,7 @@ import { IconButton, Tooltip } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import CircularProgress from '@mui/material/CircularProgress';
-import { useTranslation } from 'react-i18next';
+
 
 export default function News() {
 
