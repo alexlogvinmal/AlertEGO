@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc4b5adf.css",
-    "main.js": "/static/js/main.e2854bdb.js",
-    "index.html": "/index.html",
-    "main.dc4b5adf.css.map": "/static/css/main.dc4b5adf.css.map",
-    "main.e2854bdb.js.map": "/static/js/main.e2854bdb.js.map"
+    "main.css": "/alterego/static/css/main.dc4b5adf.css",
+    "main.js": "/alterego/static/js/main.e2854bdb.js",
+    "index.html": "/alterego/index.html",
+    "main.dc4b5adf.css.map": "/alterego/static/css/main.dc4b5adf.css.map",
+    "main.e2854bdb.js.map": "/alterego/static/js/main.e2854bdb.js.map"
   },
   "entrypoints": [
     "static/css/main.dc4b5adf.css",
