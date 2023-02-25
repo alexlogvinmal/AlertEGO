@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AlterEGO%7D/static/css/main.dc4b5adf.css",
+    "main.js": "/AlterEGO%7D/static/js/main.e2854bdb.js",
+    "index.html": "/AlterEGO%7D/index.html",
+    "main.dc4b5adf.css.map": "/AlterEGO%7D/static/css/main.dc4b5adf.css.map",
+    "main.e2854bdb.js.map": "/AlterEGO%7D/static/js/main.e2854bdb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc4b5adf.css",
+    "static/js/main.e2854bdb.js"
+  ]
+}
