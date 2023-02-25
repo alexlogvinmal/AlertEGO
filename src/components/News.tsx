@@ -8,9 +8,10 @@ import { styled } from '@mui/material/styles';
 import { IconButton, Tooltip } from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 import RefreshIcon from '@mui/icons-material/Refresh';
+import CircularProgress from '@mui/material/CircularProgress';
 import { useTranslation } from 'react-i18next';
 
-export function News() {
+export default function News() {
 
     const postState: PostState = useAppSelector((state: any) => state.postReducer);
     const dispatch = useAppDispatch();
@@ -47,7 +48,7 @@ export function News() {
     const renderPosts = () => {
         if (postState.loading) {
             loadbttn = false;
-            return <p>Loading...</p>;
+            return  <p><CircularProgress color="inherit"/></p>;
         }
         if (postState.error) {
             loadbttn = false;
@@ -56,14 +57,14 @@ export function News() {
         return newdata.map((post: Post) => (
             <Item key={post.id}>
                 <Divforbtnn>
-                <Tooltip title={t('menu.delete')}>
-                    <IconButton
-                        onClick={() => setDelid(post.id)}
-                        size="small"
-                        sx={{ ml: 2 }}>
-                        <ClearIcon sx={{ width: 32, height: 32 }} />
-                    </IconButton>
-                </Tooltip>   
+                    <Tooltip title={t('menu.delete')}>
+                        <IconButton
+                            onClick={() => setDelid(post.id)}
+                            size="small"
+                            sx={{ ml: 2 }}>
+                            <ClearIcon sx={{ width: 32, height: 32 }} />
+                        </IconButton>
+                    </Tooltip>
                 </Divforbtnn>
                 <h1>{post.title}</h1>
                 <p>{post.body}</p>
@@ -73,15 +74,14 @@ export function News() {
 
     return (
         <>
-         
-            <Stack spacing={2}>{renderPosts()}</Stack> 
+            <Stack spacing={2}>{renderPosts()}</Stack>
             {loadbttn ?
-             <Tooltip title={t('menu.loadmore')}>
+                <Tooltip title={t('menu.loadmore')}>
                     <IconButton
-                       onClick={e => setLoadto(loadto + 10)}
+                        onClick={e => setLoadto(loadto + 10)}
                         size="small"
                         sx={{ ml: 2 }}>
-                        <RefreshIcon sx={{ width: 32, height: 32, marginTop:'1rem', marginBottom:'1rem' }} />
+                        <RefreshIcon sx={{ width: 32, height: 32, marginTop: '1rem', marginBottom: '1rem' }} />
                     </IconButton>
                 </Tooltip> : <></>}
         </>

@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import { Main } from './components/Main';
-import { News } from "./components/News";
-import Login from './components/Login';
-import { Profile } from './components/Profile';
 import Header from './components/Header';
+import Main  from './components/Main';
+import News  from "./components/News";
+import Login from './components/Login';
+import Profile  from './components/Profile';
+import Footer from './components/Footer';
+import NotFound from './components/NotFound';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Alltype from './components/Alltype';
+
 
 
 function App() {
@@ -22,11 +24,11 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/test" element={<Alltype/>} />
-            <Route path="*" element={<h1>NOT FOUND</h1>} />
+            <Route path="*" element={<NotFound/>} />
           </Routes>
         </Box>
       </Container>
+      <Footer/>
     </>
   )
 };

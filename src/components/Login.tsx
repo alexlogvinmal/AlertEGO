@@ -48,7 +48,7 @@ export default function Login() {
     event.preventDefault();
   };
 
-  const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  const ColorButton = styled(Button)<ButtonProps>((theme) => ({
     color: 'white',
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     '&:hover': {

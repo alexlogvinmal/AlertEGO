@@ -20,7 +20,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 
 
 
-function Header() {
+export default function Header() {
 
     const dispatch = useAppDispatch();
     const login: LogInStatus = useAppSelector((state: any) => state.loginReducer);
@@ -234,4 +234,4 @@ function Header() {
         </AppBar>
     );
 }
-export default Header;
+
