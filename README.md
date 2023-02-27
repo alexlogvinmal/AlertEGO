@@ -1,3 +1,5 @@
+[Link to Github-Pages ](https://alexlogvinmal.github.io/AlterEGO/ "alexlogvinmal.github.io/AlterEGO")
+
 ## After you download repository please connect all dependencies
 
 ### `npm install`
