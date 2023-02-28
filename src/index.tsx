@@ -22,7 +22,7 @@ i18n
         translation: ua
       }
     },
-    lng: 'ua',
+    lng: 'ua', // Встановлення мови за замовчуванням
     fallbackLng: 'ua',
     interpolation: {
       escapeValue: false

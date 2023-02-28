@@ -6,13 +6,12 @@ import { useTranslation } from 'react-i18next';
 
 export default function Profile() {
 
-
   let navigate = useNavigate();
   const login: LogInStatus = useAppSelector((state: any) => state.loginReducer);
 
   const { t } = useTranslation();
 
-  useEffect(() => {
+  useEffect(() => { // Якщо користувач не авторизований його перекине на Головну
     if (login.status==false){
        return navigate("/");
     }

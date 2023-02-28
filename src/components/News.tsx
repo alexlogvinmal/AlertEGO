@@ -26,14 +26,14 @@ export default function News() {
     const [loadto, setLoadto] = useState(10);
     let loadbttn = true;
 
-    postState.posts = postState.posts.filter(post => post.id != delid);
-    const newdata = postState.posts.slice(0, loadto);
+    postState.posts = postState.posts.filter(post => post.id != delid); // Видалення вибраної новини
+    const newdata = postState.posts.slice(0, loadto); // Кількість новин які будуть відображені на сторінці
 
-    if (newdata.length == postState.posts.length) {
+    if (newdata.length == postState.posts.length) { // Якщо всі новини зі списку вже відображені на сторінці кнопка "Завантажити ще" зникає
         loadbttn = false
     }
 
-    const Item = styled(Paper)(({ theme }) => ({
+    const Item = styled(Paper)(({ theme }) => ({ // Кастомізація блоку новини
         ...theme.typography.body2,
         padding: theme.spacing(1),
         textAlign: 'center',
@@ -41,20 +41,21 @@ export default function News() {
     }));
 
 
-    const Divforbtnn = styled(Paper)(({ theme }) => ({
+    const Divforbtnn = styled(Paper)(({ theme }) => ({ // Кастомізація блоку видалення новини, розміщення його праворуч
         textAlign: 'right',
         boxShadow: '0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%)'
     }));
 
     const renderPosts = () => {
-        if (postState.loading) {
-            loadbttn = false;
+        if (postState.loading) { // Якщо новини в ще в статусі завантаження, відобразити на сторінці елемент завантаження і не показувати кнопку "Завантажити ще" 
+            loadbttn = false; 
             return  <p><CircularProgress color="inherit"/></p>;
         }
-        if (postState.error) {
+        if (postState.error) { // Якщо при отриманні новин виникла помилка, відобразити на сторінці помилку і не показувати кнопку "Завантажити ще" 
             loadbttn = false;
             return <p>{postState.error}</p>;
         }
+        // Якщо новини отриманні, відобразити на сторінці блок новин
         return newdata.map((post: Post) => (
             <Item key={post.id}>
                 <Divforbtnn>

@@ -33,54 +33,55 @@ export default function Header() {
 
     let navigate = useNavigate();
 
-    useEffect(() => {
+    useEffect(() => { // Перевірка localStorage на авторизований/не авторизований і зміна статусу у Redux
         const value = localStorage.getItem("status");
-        if (value === "true") {
+        if (value === "true") { 
             dispatch(dispatch(logIn()));
         } else if (value === "false") {
             dispatch(dispatch(logOut()));
         }
     }, []);
 
-    function changeLanguage(lng: any) {
+    function changeLanguage(lng: any) { // Функція для зміни мови укр/англ
         i18n.changeLanguage(lng);
         SetForLang(e => !e)
-
     }
 
-    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => { // Відкрити бургер меню у мобільній версії 
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+
+    const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => { // Відкрити меню користувача/profile
         setAnchorElUser(event.currentTarget);
     };
 
-    const handleCloseNavMenu = () => {
+    const handleCloseNavMenu = () => { // Закрити меню 
         setAnchorElNav(null);
     };
 
-    const handleCloseNavMenuMain = () => {
+    const handleCloseNavMenuMain = () => { // Закрити меню і перейти на Головну 
         setAnchorElNav(null);
         return navigate("/")
     };
-    const handleCloseNavMenuNews = () => {
+
+    const handleCloseNavMenuNews = () => { // Закрити меню і перейти на Новини 
         setAnchorElNav(null);
         return navigate("/news")
     };
 
-    const handleCloseUserMenu = () => {
+    const handleCloseUserMenu = () => { // Закрити меню меню користувача/profile
         setAnchorElUser(null);
     };
 
-    const handleCloseUserMenuProfile = () => {
+    const handleCloseUserMenuProfile = () => { // Закрити меню меню користувача/profile і перейти у Профіль
         setAnchorElUser(null);
         return navigate("/profile")
     };
 
-    const handleCloseUserMenuLogOut = () => {
+    const handleCloseUserMenuLogOut = () => { // Закрити меню меню користувача/profile і вийти з профілю (перекидує на Головну)
         setAnchorElUser(null);
-        localStorage.setItem("status", "false");
-        dispatch(logOut());
+        localStorage.setItem("status", "false"); // Оновлення  localStorage (користувач не авторизований)
+        dispatch(logOut()); // Змінити статус авторизації користувача на false (користувач не авторизований)
         return navigate("/")
     };
 

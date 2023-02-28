@@ -32,7 +32,7 @@ export default function Login() {
 
   const { t } = useTranslation();
 
-  useEffect(() => {
+  useEffect(() => { // Якщо користувач авторизований його перекине у Профіль
     if (login.status) {
       return navigate("/profile");
     }
@@ -42,7 +42,7 @@ export default function Login() {
     event.preventDefault();
   };
 
-  const ColorButton = styled(Button)<ButtonProps>((theme) => ({
+  const ColorButton = styled(Button)<ButtonProps>((theme) => ({ // Кастомізація кнопки Увійти/Log In
     color: 'white',
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     '&:hover': {
@@ -50,7 +50,7 @@ export default function Login() {
     },
   }));
 
-  function onSubmit(){
+  function onSubmit(){ // Перевірка введених даних для авторизаціі
     console.log(username, password)
     if(username=='admin' && password=='12345'){
       localStorage.setItem("status", "true");
